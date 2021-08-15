@@ -1,0 +1,28 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:semantic="sap.m.semantic" height="100%" controllerName="SCM.controller.main_page" class="viewPadding">
+	
+	<html:style>
+		jQuery.sap.includeStyleSheet("css/style.css");
+	</html:style>
+	
+	<App>
+	<SplitContainer>
+		<masterPages>
+
+		</masterPages>
+		
+		<detailPages>
+			
+	    <semantic:SemanticPage title="Semantic Page" id="__page3">
+	        <semantic:customFooterContent>
+	            <Button text="OK" width="100px" id="FB1" icon="sap-icon://accept"/>
+	            <Button text="Cancel" width="100px" id="FB2" icon="sap-icon://sys-cancel"/>
+	        </semantic:customFooterContent>
+	    <semantic:customHeaderContent>
+	        <Button width="100px" id="HB1" icon="sap-icon://menu"/>
+	    </semantic:customHeaderContent>
+	    </semantic:SemanticPage>
+	    
+	    </detailPages>
+	</SplitContainer>
+	</App>
+</mvc:View>

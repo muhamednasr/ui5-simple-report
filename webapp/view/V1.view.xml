@@ -1,0 +1,57 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="SCM.controller.V1">
+	<App>
+		<pages>
+			<Page title="Title">
+			<content>
+			    <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" width="20%" id="__input1" enabled="false" editable="false" value="Input:"/>
+			    <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" width="40%" id="Test"/>
+			    <Button xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" text="Ok!" width="100px" id="Button1" press="onPress"/>
+			    <Table xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" noDataText="Drop column list items here and columns in the area above" id="idTable" items="{/FinesSet}">
+			        <items>
+			            <ColumnListItem id="__item0">
+			                <cells>
+			                    <Text text="{Fineid}" id="__text4"/>
+			                    <Text text="{Partner}" id="__text5"/>
+			                    <Text text="{Inspctr}" id="__text6"/>
+			                    <Text text="{Ticamt}" id="__text7"/>
+			                    </cells>
+			                
+			            </ColumnListItem>
+			            </items>
+			        <columns>
+			            <Column id="__column0">
+			                <header>
+			                    <Label text="Fine" id="__label0"/>
+			                    
+			                </header>
+			                
+			            </Column>
+			            <Column id="__column1">
+			                <header>
+			                    <Label text="Partner" id="__label1"/>
+			                    
+			                </header>
+			                
+			            </Column>
+			            <Column id="__column3">
+			                <header>
+			                    <Label text="Name" id="__label3"/>
+			                    
+			                </header>
+			                
+			            </Column>			            
+			            <Column id="__column2">
+			                <header>
+			                    <Label text="Amt" id="__label2"/>
+			                    
+			                </header>
+			                
+			            </Column>
+			            
+			            </columns>
+			        </Table>
+			</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

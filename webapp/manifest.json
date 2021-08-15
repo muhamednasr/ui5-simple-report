@@ -1,0 +1,129 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "SCM",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"YSCM_FINES_SRV": {
+				"uri": "/sap/opu/odata/sap/YSCM_FINES_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_hcb", "sap_belize", "sap_fiori_3"]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "SCM.view.root_view",
+			"async": true,
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "SCM.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneTime",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "YSCM_FINES_SRV",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"viewPath": "SCM.View",
+				"controlId": "V_Root",
+				"viewLevel": 1,
+				"controlAggregation": "pages",
+				"routerClass": "sap.m.routing.Router",
+				"async": true
+			},
+			"targets": {
+				"Target_main": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "main_page",
+					"viewLevel": 1
+				},
+				"MainTable": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "V1",
+					"viewLevel": 1
+				}
+			},
+			"routes": [{
+				"name": "Route_main",
+				"pattern": "",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["Target_main"]
+			}, {
+				"name": "MainT",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["MainTable"],
+				"pattern": "FinesSet/{id}"
+			}]
+		}
+	}
+}

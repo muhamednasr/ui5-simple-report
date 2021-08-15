@@ -1,0 +1,88 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="YSCM_FINES_SRV" xml:lang="en" sap:schema-version="1">
+            <EntityType Name="Fines" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Fineid"/>
+                    <PropertyRef Name="Intfine"/>
+                </Key>
+                <Property Name="CendDate" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="تاريخ انتهاء الرخصة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fineid" Type="Edm.String" Nullable="false" MaxLength="9" sap:unicode="false" sap:label="رقم المخالفة" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Intfine" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="رقم داخلي" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Indvfnf" Type="Edm.Boolean" sap:unicode="false" sap:label="مخالفة أفراد" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vehcfnf" Type="Edm.Boolean" sap:unicode="false" sap:label="مخالفة مركبات" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Commfnf" Type="Edm.Boolean" sap:unicode="false" sap:label="مخالفة رخص تجارية" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ticamt" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="قيمة المخالفة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Inatid" Type="Edm.String" MaxLength="18" sap:unicode="false" sap:label="رقم الهوية" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iiname" Type="Edm.String" MaxLength="80" sap:unicode="false" sap:label="اسم المخالف" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iaddrs" Type="Edm.String" MaxLength="80" sap:unicode="false" sap:label="عنوان المخالف" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Inatio" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="جنسية المخالف" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iphone" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="تليفون المخالف" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iwrphn" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="تليفون العمل" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iarea" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="مكان المخالفة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iconf" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="المحجوزات" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iecntr" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="رقم العداد" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Clicno" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="رقم الرخصة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Clicact" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="نشاط الرخصة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Comname" Type="Edm.String" MaxLength="80" sap:unicode="false" sap:label="الاسم التجاري" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Clicsrc" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="License Source" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Clicreg" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Region" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cremarks" Type="Edm.String" MaxLength="80" sap:unicode="false" sap:label="ملاحظات" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Clandno" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="رقم القطعة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cbuperm" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="رقم إجازة البناء" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vpltno" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="رقم اللوحة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vpltsrc" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="مصدر اللوحة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vplttyp" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="فئة اللوحة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vpltccd" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="لون اللوحة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vtrafid" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="الرمز المروري" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vletter" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="حرف" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VtyCol" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="نوع ولون المركبة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Partner" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="BusinessPartner" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Penalty" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="غرامة التأخير" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Discamt" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="قيمة الخصم" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Discby" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="خصم بواسطة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Inspctrcd" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="كود المحرر" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Inspctr" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="محرر المخالفة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Deprmntcd" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="كود القسم" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Deprmnt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="القسـم" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fnstate" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="حالة المخالفة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Inspprf" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="صفة المخالف" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Enterdby" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="مدخل المخالفة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Collctby" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="جهة التحصيل" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Collctwy" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="طريقة التحصيل" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Receptno" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="رقم الايصال" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Payrev" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="دفع ملغي" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Changdby" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Changed by" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Changeat" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Changed at" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Usname" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="User Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Finesrc" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="مصدر المخالفة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sharef" Type="Edm.Boolean" sap:unicode="false" sap:label="معممة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Flat" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="Flat No." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Benaya" Type="Edm.Byte" sap:unicode="false" sap:label="رقم البناية" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mante2a" Type="Edm.String" MaxLength="25" sap:unicode="false" sap:label="المنطقة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Malek" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="أسم المالك" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Emara" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="إمارة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Hay2a" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="هيئة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ReasonDisc" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="أسباب الخصم" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DiscBy" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="الخصم بواسطة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedBy" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="التعديل بواسطة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CancelReason" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="سبب الألغاء" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CancelBy" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="ألغاء بواسطة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bpkind" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="نوع العميل" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BpkindTxt" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="نوع العميل - text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ClosedBy" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="الغاء بواسطة" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="YSCM_FINES_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="FinesSet" EntityType="YSCM_FINES_SRV.Fines" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/YSCM_FINES_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/YSCM_FINES_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>
